@@ -1,111 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>App Name: A Coding Challange</title>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Swift Buzz: A Coding Challange</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-  <!-- Devicons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/site.css">
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
 
-</head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/site.css">
 
-<body>
 
-  <header>
-    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark">
+  </head>
+
+  <body>
+
+    <header>
+      <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="/img/Base Logo Vector Files Blue Red.svg" height="50" alt="">
+            Swift Buzz
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon-mrb">
+              <i class="bi bi-list"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/app.html">App</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/code.html">The Code</a>
+              </li>
+              <li class="nav-item">
+                <!-- Change This Before Publishing -->
+                <a class="nav-link" href="https://github.com/MattBridges">The Repo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://merry-cactus-0a2586.netlify.app">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+    <main class="content container">
+
+      <h1>SwiftBuzz: A Coding Challange</h1>
+      <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+      <p>Enter 2 values you want to test.  Press the button and a table will generate populated correctly with the Number, Swift, Buzz or SwiftBuzz</p>
+      <div class="row row-cols-1 row-cols-md-4 align-items-center">
+          <div class="col">
+              <label for="swiftValue">Swift Value</label>
+              <input type="number" class="form-control" id="swiftValue" placeholder="Swift Value" aria-label="Swift Value" value="3">
+          </div>
+          <div class="col">
+              <label for="buzzValue">Buzz Value</label>
+              <input type="number" class="form-control" id="buzzValue" placeholder="Buzz Value" aria-label="Buzz Value" value="5">
+          </div>
+          <div class="col">
+              <label for="stopValue">Stop Value</label>
+              <input type="number" class="form-control" id="stopValue" placeholder="Stop Value" aria-label="Stop Value" value="25">
+          </div>
+          <div class="col">
+              <button id="btnSubmit" class="btn btn-dark w-100" >Go</button>
+              <button id="btnSubmitRecursive" class="btn btn-primary w-100" >Recursive</button>
+              <button id="btnSubmitTurnary" class="btn btn-warning w-100">Turnary</button>    
+              <button id="btnSubmitDry" class="btn btn-info w-100">D.R.Y.</button>          
+          </div>        
+      </div>
+      <div class="row">
+        <h2 class="mt-5 border-bottom border-2">Results</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered border-muted text-center">
+            <tbody id="results">
+                <!-- The Results Go Here
+                   <tr><td>1</td></tr>...-->
+            </tbody>
+          </table>
+        </div>
+      </div>
+        
+  
+      </div>
+
+
+
+    </main>
+    <footer class="container-fluid py-3">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">
-          <img src="/img/Base Logo Vector Files Blue Red.svg" height="50" alt="">
-          App Name
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon-mrb">
-            <i class="bi bi-list"></i>
-          </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/app.html">App</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/code.html">The Code</a>
-            </li>
-            <li class="nav-item">
-              <!-- Change This Before Publishing -->
-              <a class="nav-link" href="https://github.com/MattBridges">The Repo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://merry-cactus-0a2586.netlify.app">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-          </ul>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-center order-last order-lg-first">
+          <div class="col text-center text-lg-start ">&copy;2023 Matt Bridges</div>
+          <div class="col text-center">
+            <img src="/img/Light_Grey_Signature_Long.svg" height="40" alt="">
+          </div>
+          <div class="col d-flex justify-content-center justify-content-lg-end my-2">
+            <a href="#" target="_blank" class="socialicons"><i class="bi bi-linkedin"></i></a>
+            <a href="#" target="_blank" class="socialicons"><i class="bi bi-twitter"></i></a>
+            <a href="#" target="_blank" class="socialicons"><i class="bi bi-youtube"></i></a>
+            <a href="#" target="_blank" class="socialicons"><i class="bi bi-instagram"></i></a>
+            <a href="#" target="_blank" class="socialicons"><i class="bi bi-github"></i></a>
+          </div>
         </div>
       </div>
-    </nav>
-
-  </header>
-  <main class="content container">
-
-    <h1>APP UI GOES HERE</h1>
-    <input type="text" id="message" placeholder="Enter a Message.....">
-    <button class="btn btn-primary" id="btnSubmit" type="button">Display a Message</button>
 
 
-  </main>
-  <footer class="container-fluid py-3">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-lg-3 align-items-center order-last order-lg-first">
-        <div class="col text-center text-lg-start ">&copy;2023 Matt Bridges</div>
-        <div class="col text-center">
-          <img src="/img/Light_Grey_Signature_Long.svg" height="40" alt="">
-        </div>
-        <div class="col d-flex justify-content-center justify-content-lg-end my-2">
-          <a href="#" target="_blank" class="socialicons"><i class="bi bi-linkedin"></i></a>
-          <a href="#" target="_blank" class="socialicons"><i class="bi bi-twitter"></i></a>
-          <a href="#" target="_blank" class="socialicons"><i class="bi bi-youtube"></i></a>
-          <a href="#" target="_blank" class="socialicons"><i class="bi bi-instagram"></i></a>
-          <a href="#" target="_blank" class="socialicons"><i class="bi bi-github"></i></a>
-        </div>
-      </div>
-    </div>
+    </footer>
 
 
-  </footer>
-
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
     <!-- SweetAlert CDN -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!--My script-->
-  <script src="/js/site.js"></script>
+    <!--My scripts-->
+    <script src="/js/site.js"></script>
+    <script src="/js/recursive_site.js"></script>
+    <script src="/js/ternary_site.js"></script>
+    <script src="/js/dry_site.js"></script>
 
-  <script>
-    document.getElementById('btnSubmit').addEventListener('click', DisplayMessage);
-  </script>
-</body>
+    <script>
+      document.getElementById('btnSubmit').addEventListener('click', GetValues);
+      document.getElementById('btnSubmitRecursive').addEventListener('click', GetValuesRecursive);
+      document.getElementById('btnSubmitTurnary').addEventListener('click', GetValuesTurnary);
+      document.getElementById('btnSubmitDry').addEventListener('click', GetValuesDry);
+    </script>
+  </body>
 
 </html>

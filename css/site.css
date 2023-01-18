@@ -102,3 +102,20 @@ html,
   font-size: 4rem;
   padding-left: .5rem;
  }
+
+ .swift{
+  background: gray !important;
+ }
+
+ .buzz{
+  background: var(--mrb-dark-color) !important;
+  color: var(--mrb-light-color);
+ }
+
+ .swiftBuzz{
+  background: var(--mrb-highlight-color)!important;
+ }
+
+ td{
+  max-width: 1rem;
+ }
