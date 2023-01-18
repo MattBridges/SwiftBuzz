@@ -1,6 +1,5 @@
 //Global Variables
 let recursiveSwiftBuzzArray = [];
-let counter = 0;
 
 //Get the input values.
 function GetValuesRecursive() {
@@ -12,8 +11,8 @@ function GetValuesRecursive() {
   //Check to make sure only numbers were entered
   if (Number.isInteger(swiftValue) && Number.isInteger(buzzValue) && Number.isInteger(stopValue)) {
     //If all are numbers Generate FizzBuzz then display it.
-    GenerateFizzBuzzRecursively(swiftValue, buzzValue, stopValue,counter);
-    DisplayFizzBuzz(recursiveSwiftBuzzArray);
+    GenerateFizzBuzzRecursively(swiftValue, buzzValue, stopValue);
+    DisplayFizzBuzz(recursiveSwiftBuzzArray.reverse());
 
   }
   else {
@@ -29,26 +28,26 @@ function GetValuesRecursive() {
 }
 
 //Generate the SwiftBuzz using recursion.
-function GenerateFizzBuzzRecursively(swiftValue, buzzValue, stopValue,count) {
+function GenerateFizzBuzzRecursively(swiftValue, buzzValue, stopValue) {
     
-  if (count % (swiftValue * buzzValue) == 0) {
+  if (stopValue % (swiftValue * buzzValue) == 0) {
     //Put Fizz Buzz Result Here
     recursiveSwiftBuzzArray.push('SwiftBuzz');
   }
-  else if (count % swiftValue == 0) {
+  else if (stopValue % swiftValue == 0) {
     //Put Swift Result Here
     recursiveSwiftBuzzArray.push('Swift');
   }
-  else if (count % buzzValue == 0) {
+  else if (stopValue % buzzValue == 0) {
     //Put Buzz Result Here
     recursiveSwiftBuzzArray.push('Buzz');
   }
   else {
     //Put Plain Number Here
-    recursiveSwiftBuzzArray.push(count);
+    recursiveSwiftBuzzArray.push(stopValue);
   }    
 
-  if(count<stopValue){
-    GenerateFizzBuzzRecursively(swiftValue,buzzValue,stopValue, count+=1);
+  if(stopValue>0){
+    GenerateFizzBuzzRecursively(swiftValue,buzzValue,stopValue-=1);
   }
 }
