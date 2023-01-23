@@ -192,9 +192,13 @@
     </pre>
         </div>
         <div class="col-12 col-lg-4">
-          <p>The code is structured in one function</p>
-          <h5><code class="code-writeup">DisplayMessage()</code></h5>
-          <p>This function displays the message in a sweet alert</p>
+          <p>The basic three function app, where we get some user input, generate the FizzBuzz then display the results</p>
+          <h5><code class="code-writeup">GetValues()</code></h5>
+          <p>This function we get the users input values and check to make sure that they are actually numbers. If they are we pass them into our generate function, if not we popup a warning window informing the user that they entered an invalid input.</p>
+          <h5><code class="code-writeup">GenerateFizzBuzz()</code></h5>
+          <p>To generate our values, we loop through each number from 0 to the users input stop value. To check if the value is devisible by the swift and buzz values we first multiply them together and use the modulus operator to see if the value we are testing goes into this calculation evenly. If there is no remainder we push a value of "SwiftBuzz" into our results array.  If the value being checked is not divisible by both we take the modulus of the value to test and the user inputs for both swift and buzz and push the appropriate input into the results array. If the test value isnt divisibe by any of those inputs, we push the number itself into the results array.</p>
+          <h5><code class="code-writeup">DisplayFizzBuzz()</code></h5>
+          <p>After iterating through all of the possibe values, we grab the results element from the page, and build a 5 column table to display the FizzBuzz results. </p>
         </div>
       </div>
 

@@ -175,6 +175,8 @@ html,
 
  .socialicons {
    font-size: 2rem;
+   padding: 5px;
+   color:var(--mrb-secondary-color);
  }
 
  .footer-cta {
