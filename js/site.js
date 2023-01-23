@@ -38,8 +38,6 @@ else
         text: 'Only integers are allowed for SwiftBuzz'
       });
     }
-
-
 }
 
 //Generate the FizzBuzz.
@@ -93,7 +91,6 @@ function DisplayFizzBuzz(swiftBuzzArray) {
       className='';
     }
 
-
     //Force Table to only be 5 columns wide
     if (i-1% 5 == 0) {
       tableHTML += '<tr>'
@@ -108,13 +105,8 @@ function DisplayFizzBuzz(swiftBuzzArray) {
     if ((i) % 5 == 0) {
       tableHTML += '</tr>';
     }
-
-
   }
   tableBody.innerHTML = tableHTML;
   recursiveSwiftBuzzArray = [];
   counter = 0;
-
-
-
 }
